@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JS Buổi 5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+        <!-- boostrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+            integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <!-- link css  -->
+        <link rel="stylesheet" href="./style.css">
+    <body>
+        <section class="baitap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav>
+                            <div class="text-center">
+                            <button id="bai1">Bài 1</button>
+                            <button id="bai2">Bài 2</button>
+                            <button id="bai3">Bài 3</button>
+                            <button id="bai4">Bài 4</button>
+                            </div>
+                        </nav>
+                        <div class="tab-content" >
+                            <div id="b1">
+                                <div class="row mt-5">
+                                    <div class="baitap__bd col-8 offset-2">
+                                        <div class="baitap__title text-center">
+                                            <h3>Bài Tập 1: quản lý tuyển sinh</h3>
+                                        </div>
+                                        <div class="baitap__content">
+                                            <div class="baitap__tag mt-5 text-center">
+                                                <h3></i> Quản lý tuyển sinh</h3>
+                                            </div>
+                                            <div class="baitap__type mt-5">
+                                                <p>Viết chương trình nhập: điểm chuẩn của hội đồng, điểm 3 môn thi của thí sinh, điểm khu vực,
+                                                    điểm đối tượng.
+                                                    Cho biết thí sinh đó đậu hay rớt và tổng số điểm đạt được</p>
+                                            </div>
+                                            <form class="form-group my-5">
+                                                <div class="form__top d-flex align-items-center">
+                                                    <div class="input__group me-3">
+                                                        <input id="standardPoint" type="number" placeholder="Nhập điểm chuẩn....">
+                                                    </div>
+                        
+                                                    <div class="input-group me-3">
+                                                        <label class="input-group-text" for="inputGroupSelect01">Khu Vực</label>
+                                                        <select id="typeArea" class="form-select">
+                                                            <option id="A" value="A">A</option>
+                                                            <option id="B" value="B">B</option>
+                                                            <option id="C" value="C">C</option>
+                                                            <option id="X" value="X" selected>X</option>
+                                                        </select>
+                                                    </div>
+                        
+                                                    <div class="input-group me-3">
+                                                        <label class="input-group-text" for="inputGroupSelect01">Đối Tượng</label>
+                                                        <select id="typePeople" class="form-select">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="0" selected>0</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form__bottom mt-4">
+                                                    <input id="sub1" type="number" placeholder="Nhập điểm môn 1...">
+                                                    <input id="sub2" type="number" placeholder="Nhập điểm môn 2...">
+                                                    <input id="sub3" type="number" placeholder="Nhập điểm môn 3...">
+                                                </div>
+                                                <div class="form__btn text-center">
+                                                    <a id="btnGrade" type="submit" class="btn mt-4">Tính Điểm</a>
+                                                </div>
+                                            </form>
+                                            <div class="baitap__type ps-5">
+                                                <span>kết quả: </span>
+                                                <span id="tagPoint">...</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                        <!-- Bài 2 -->
+                        <div id="b2">
+                            <div class="row mt-5 text-center">
+                                <div class="baitap__bd col-8 offset-2">
+                                    <div class="baitap__title text-center">
+                                        <h3>Bài Tập 2: Tính tiền điện</h3>
+                                    </div>
+                                    <div class="baitap__content">
+                                        <div class="baitap__tag mt-5 text-center">
+                                            <h3></i> Tính tiền điện</h3>
+                                        </div>
+                                        <div class="baitap__type mt-5">
+                                            <p>Viết chương trình nhập vào thông tin tiêu thụ điện (Tên, số kw) </p>
+                                        </div>
+                                        <form class="form-group my-5">
+                        
+                                            <div class="form__bottom mt-4 text-center">
+                                                <input id="elecName" type="text" placeholder="nhập họ và tên....">
+                                                <input id="elecKw" type="number" placeholder="số Kw đã sử dụng...">
+                                            </div>
+                                            <div class="form__btn text-center">
+                                                <a id="btnElecBill" class="btn mt-4">Tính Tiền Điện</a>
+                                            </div>
+                                        </form>
+                                        <div class="baitap__type ps-5">
+                                            <span>kết quả: </span>
+                                            <span id="tagElecBill"></span>
+                                        </div>
+                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="b3">
+                            <div class="row mt-5">
+                                <div class="baitap__bd col-8 offset-2">
+                                    <div class="baitap__title text-center">
+                                        <h3>Bài Tập 3: Tính thuế thu nhập cá nhân</h3>
+                                    </div>
+                                    <div class="baitap__content">
+                                        <div class="baitap__tag mt-5 text-center">
+                                            <h3>Tính thuế thu nhập cá nhân</h3>
+                                        </div>
+                                        <div class="baitap__type mt-5">
+                                            <p>Viết chương trình nhập vào thông tin của 1 cá nhân (Họ tên, tổng thu nhập năm, số
+                                                người phụ thuộc). Tính và xuất thuế thu nhập cá nhân phải trả theo quy định sau:
+                                                <br>
+                                                - Thu nhập chịu thuế = Tổng thu nhập năm - 4tr- Số người phụ thuộc * 1.6tr
+                                            </p>
+                                        </div>
+                                        <form class="form-group my-5">
+                                            <div class="form__bottom mt-4">
+                                                <input id="taxName" type="text" placeholder="Họ và tên...">
+                                                <input id="inconme" type="number" placeholder="Tổng thu nhập năm...">
+                                                <input id="dependence" type="number" placeholder="Số người phụ thuộc...">
+                                            </div>
+                                            <div class="form__btn text-center">
+                                                <a id="btnIncome" class="btn mt-4">Tính Tiền Thuế</a>
+                                            </div>
+                                        </form>
+                                        <div class="baitap__type ps-5">
+                                            <span>kết quả: </span>
+                                            <span id="tagIncomeTax">...</span>
+                                        </div>                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="b4">
+                            <div class="row mt-5">
+                                <div class="baitap__bd col-8 offset-2">
+                                    <div class="baitap__title text-center">
+                                        <h3>Bài Tập 4: Tính tiền cáp</h3>
+                                    </div>
+                                    <div class="baitap__content">
+                                        <div class="baitap__tag mt-5 text-center">
+                                            <h3><i class="fa fa-clipboard-list"></i> Tính tiền cáp</h3>
+                                        </div>
+                                        <div class="baitap__type mt-5">
+                                            <p>❖ Viết chương trình tính hóa đơn khách hàng cho một công ty cáp. Có 2 loại khách hàng:
+                                                Nhà dân và doanh nghiệp. Có 2 mức giá tính tiền cáp:
+                                            </p>
+                                        </div>
+                                        <form class="form-group my-5">
+                                            <div class="form__bottom mt-4">
+                                                <div class="input-group me-3">
+                                                    <select id="selecCable" class="form-select">
+                                                        <option selected>Chọn Loại Khách Hàng</option>
+                                                        <option id="Business" value="Ba">Business</option>
+                                                        <option id="home" value="Bb">Home</option>
+                                                    </select>
+                                                </div>
+                                                <input id="cableName" type="text" placeholder="Nhập mã khách hàng">
+                                                <input id="channels" type="number" placeholder="Số kênh cao cấp">
+                                                <input id="moreConnection" class="input__dnone" type="number" placeholder="Số Kết Nối">
+                                            </div>
+                                            <div class="form__btn text-center">
+                                                <a id="btncableBill" class="btn mt-4">Tính Tiền Cáp</a>
+                                            </div>
+                                        </form>
+                                        <div class="baitap__type ps-5">
+                                            <span>kết quả: </span>
+                                            <span id="cableToBill">...</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+       
+
+        <!-- boostrap  -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+            crossorigin="anonymous"></script>
+        <!-- link js  -->
+        <script src="./index.js"></script>
+    </body>
+</html>
